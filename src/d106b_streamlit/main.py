@@ -14,8 +14,10 @@ st.header("Use of ENV Keys")
 load_dotenv()
 
 # 2. Access the variables using os.getenv()
-api_key = os.getenv("API_KEY")
+# api_key = os.getenv("API_KEY")
 tel = os.getenv("my_tel_num")
+
+api_key = st.secrets["API_KEY"]
 
 if api_key:
     st.write("API key is loaded.")
